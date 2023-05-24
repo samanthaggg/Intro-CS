@@ -1,5 +1,11 @@
 String State = "IntroScreen";
 int y;
+int sx;
+int sy;
+boolean leftKey;
+boolean rightKey;
+boolean upKey;
+boolean downKey;
 
 void setup() {
   size(800, 800);
@@ -13,15 +19,17 @@ void draw() {
 
     text("Play", 200, 600);
     textSize(100);
+    //background
   } else if (State == "GameScreen") {
     for (int x = 0; x < 12; x++) {
       
-      for (int y = 0; y < 12; y += 10){
+      for (int y = 0; y < 12; y ++){
       fill(90, 238, 129);
       
-      square(x*50 + 50, y, 50); // spacing * 
+      square(x*50 + 50, y*50, + 50); // spacing * 
       fill(115, 190, 231);
-  ellipse(250, 400, 80, 50);
+      //snake
+  ellipse(sx, sy, 80, 50);
   fill(255);
   circle(265, 390, 10);
     }
@@ -37,4 +45,9 @@ void mousePressed() {
   State = "GameScreen";
   fill(115, 190, 231);
   ellipse(250, 400, 570, 450);
+}
+
+void keyPressed() {
+  if (leftKey == true, 
+  
 }
